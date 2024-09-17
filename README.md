@@ -5,21 +5,26 @@
 fun main()
 {
     val n = 5
-    for (i in 1..2*n-1)
+    val rowLength = 2*n-1
+    val columnLength  = 3*n
+    val middleItem = n+1/2
+    val numberOfSpace = n - ((n + 1) / 2)
+
+    for (i in 1..rowLength)
     {
-        for(j in 1..3*n)
+        for(j in 1..columnLength)
         {
-            if (i==n+1/2)
+            if (i==middleItem)
             {
                 print("*")
             }
             else
             {
-                if (i<n+1/2)
+                if (i<middleItem)
                 {
-                    if (i<=n-((n+1)/2))
+                    if (i<=numberOfSpace)
                     {
-                        if (j==3*n)
+                        if (j==columnLength)
                         {
                             print("*")
 
@@ -51,7 +56,7 @@ fun main()
                     }
 
                 }
-                else if (i>n+1/2)
+                else if (i>middleItem)
                 {
 
                     if (j==1)
@@ -59,9 +64,7 @@ fun main()
                         print("*")
                     }
                     else{
-                        var rowLength = (2 * n) - 1  // This is 5
-                        var vijayVar = n - ((n + 1) / 2)  // This is 3 - 2 = 1
-                        if (i <= rowLength - vijayVar)
+                        if (i <= rowLength - numberOfSpace)
                         {
                             if (j==2)
                             {
