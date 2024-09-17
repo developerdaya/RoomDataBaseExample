@@ -1,6 +1,90 @@
 # How to get a Git project into your build:
 
 ## Step 1. Add the JitPack repository to your build file
+```
+fun main()
+{
+    val n = 5
+    for (i in 1..2*n-1)
+    {
+        for(j in 1..3*n)
+        {
+            if (i==n+1/2)
+            {
+                print("*")
+            }
+            else
+            {
+                if (i<n+1/2)
+                {
+                    if (i<=n-((n+1)/2))
+                    {
+                        if (j==3*n)
+                        {
+                            print("*")
+
+                        }
+                        else{
+                            print(" ")
+                        }
+                    }
+                    else{
+                        if (j==1)
+                        {
+                            repeat(n)
+                            {
+                                print(" ")
+                            }
+                            repeat(n)
+                            {
+                                print("*")
+                            }
+                            repeat(n-1)
+                            {
+                                print(" ")
+                            }
+
+                            print("*")
+
+                        }
+
+                    }
+
+                }
+                else if (i>n+1/2)
+                {
+
+                    if (j==1)
+                    {
+                        print("*")
+                    }
+                    else{
+                        var rowLength = (2 * n) - 1  // This is 5
+                        var vijayVar = n - ((n + 1) / 2)  // This is 3 - 2 = 1
+                        if (i <= rowLength - vijayVar)
+                        {
+                            if (j==2)
+                            {
+                                repeat(n-1)
+                                {
+                                    print(" ")
+                                }
+                                repeat(n)
+                                {
+                                    print("*")
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        println()
+    }
+}
+
+
+```
 
 Add it in your root build.gradle at the end of repositories:
 
