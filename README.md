@@ -277,7 +277,9 @@ class MainActivity : AppCompatActivity() {
     DELETE FROM employee WHERE experience < :years
     ```
 
-Screenshot
+Screenshots
+![Uploading image.png…]()
+_________________________________________________________________________________________
 ![image](https://github.com/user-attachments/assets/35ea3c77-0054-4beb-8e19-321489f5ebe0)
 # Happy Coding : 💗
 
